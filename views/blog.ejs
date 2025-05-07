@@ -1,0 +1,218 @@
+<%- include('./component/header.ejs') %>
+  <div class=" bg-black ">
+    <img src="/images/coffee.jpg" alt="" style="height: 300px; width: 100% " class="object-none " />
+  </div>
+  <div class=' grid place-content-center mt-10 '>
+    <h5 class='font-russoOne text-2xl'>Blog Hallo</h5>
+  </div>
+  <div class="card grid place-content-center w-full xl:px-52 lg:px-28 md:px-12 xs:px-8 px-20 py-10  ">
+    <!-- <div class="card  w-full xl:px-56 sm:px-32 px-12 py-10 gap-4 columns-3"> -->
+    <div
+      class="grid grid-cols-1  xs:grid-cols-2 md:grid-cols-3 md:columns-3 container w-full sm:gap-4 gap-2  space-y-3">
+
+      <% result.forEach(res=> { %>
+        <!-- style="height: 55%;  width: 100% " -->
+
+        <div class="w-full  self-center border-2 rounded-lg break-inside-avoid bg-slate-100 ">
+          <img class="rounded w-full h-[12rem] " src="<%= res.image %>" alt="" />
+          <div class="content sm:px-6 px-2 mt-6 grid lg:gap-y-4 md:gap-y-2 sm:gap-y-3 gap-y-2 ">
+            <div class="time flex  justify-between font-roboto text-xs w-full">
+              <span>3 days ago</span>
+              <span>1 min</span>
+            </div>
+            <div class="title  font-roboto ">
+              <h5>
+                <strong>
+                  <%= res.judul %>
+                </strong>
+              </h5>
+            </div>
+            <div class="main_content flex flex-col  lg:text-base text-sm font-roboto">
+              <span>
+                Ipsum is not simply random text.
+                It has roots in a piece of classical
+                Latin literature from 45 BC
+              </span>
+              <a class="text-xs mt-3" href="coba/viewAdmin/<%= res.id %> ">read more </a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class=" border-2 rounded-md">
+        <img class="rounded" src="/images/1.jpg" alt="" />
+        <div class="content  px-6 mt-6 ">
+          <div class="time flex w-2/4 justify-between font-roboto text-xs">
+            <span>1 days ago</span>
+            <span>1 min</span>
+          </div>
+          <div class="title  font-roboto ">
+            <h5>
+              <strong>Contrary to popular belief, Lorem </strong>
+            </h5>
+          </div>
+          <div class="main_content flex flex-col mt-4 text-base font-roboto">
+            <span>
+              Ipsum is not simply random text.
+              It has roots in a piece of classical
+              Latin literature from 45 BC
+            </span>
+            <a class="text-xs mt-3" href="html.com">read more </a>
+          </div>
+        </div>
+      </div> -->
+        <% }); %>
+
+    </div>
+
+    <!-- <div class=" border-2 rounded-md"> -->
+
+    <!-- <div class="grid-item-card w-[250px] border-2 rounded-md">
+          <img class="rounded" src="/images/3.jpg" alt="" />
+          <div class="content  px-6 mt-6 ">
+            <div class="time flex w-2/4 justify-between font-roboto text-xs">
+              <span>1 days ago</span>
+              <span>1 min</span>
+            </div>
+            <div class="title mt-4 font-roboto ">
+              <h5>
+                <strong>1 </strong>
+              </h5>
+            </div>
+            <div class="main_content flex flex-col mt-4 text-base font-roboto">
+              <span>
+                Ipsum is not simply random text.
+                It has roots in a piece of classical
+                Latin literature from 45 BC
+              </span>
+              <a class="text-xs mt-3" href="html.com">read more </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item-card w-[250px] border-2  rounded-md">
+          <img class="rounded " src="/images/3.jpg" alt="" />
+          <div class="content  px-6 mt-6 ">
+            <div class="time flex w-2/4 justify-between font-roboto text-xs">
+              <span>2 days ago</span>
+              <span>1 min</span>
+            </div>
+            <div class="title mt-4 font-roboto ">
+              <h5>
+                <strong>2 </strong>
+              </h5>
+            </div>
+            <div class="main_content flex flex-col mt-2 text-base font-roboto">
+              <span>
+                Ipsum is not simply random text.
+                It has roots in a piece of classical
+                Latin literature from 45 BC
+              </span>
+              <a class="text-xs mt-3" href="html.com">read more </a>
+            </div>
+          </div>
+        </div>
+
+        <div class=" grid-item-card w-[250px] border-2 rounded-md">
+          <img class="rounded" src="/images/3.jpg" alt="" />
+          <div class="content  px-6 mt-6 ">
+            <div class="time flex w-2/4 justify-between font-roboto text-xs">
+              <span>3 days ago</span>
+              <span>1 min</span>
+            </div>
+            <div class="title mt-4 font-roboto ">
+              <h5>
+                <strong>3</strong>
+              </h5>
+            </div>
+            <div class="main_content flex flex-col mt-4 text-base font-roboto">
+              <span>
+                Ipsum is not simply random text.
+                It has roots in a piece of classical
+                Latin literature from 45 BC
+              </span>
+              <a class="text-xs mt-3" href="html.com">read more </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class=" grid-item-card w-[250px] border-2 rounded-md">
+          <img class="rounded" src="/images/3.jpg" alt="" />
+          <div class="content  px-6 mt-6 ">
+            <div class="time flex w-2/4 justify-between font-roboto text-xs">
+              <span>4 days ago</span>
+              <span>1 min</span>
+            </div>
+            <div class="title mt-4 font-roboto ">
+              <h5>
+                <strong>Contrary to popular belief, Lorem </strong>
+              </h5>
+            </div>
+            <div class="main_content flex flex-col mt-4 text-base font-roboto">
+              <span>
+                Ipsum is not simply random text.
+                It has roots in a piece of classical
+                Latin literature from 45 BC
+              </span>
+              <a class="text-xs mt-3" href="html.com">read more </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class=" grid-item-card w-[250px] border-2 rounded-md ">
+          <img class="rounded" src="/images/3.jpg" alt="" />
+          <div class="content  px-6 mt-6 ">
+            <div class="time flex w-2/4 justify-between font-roboto text-xs">
+              <span>5 days ago</span>
+              <span>1 min</span>
+            </div>
+            <div class="title mt-4 font-roboto ">
+              <h5>
+                <strong>kecil </strong>
+              </h5>
+            </div>
+            <div class="main_content flex flex-col mt-2 text-base font-roboto">
+              <span>
+                Ipsum is not simply random text.
+                It has roots in a piece of classical
+                Latin literature from 45 BC
+              </span>
+              <a class="text-xs mt-3" href="html.com">read more </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class=" grid-item-card w-[250px] border-2 rounded-md">
+          <img class="rounded" src="/images/3.jpg" alt="" />
+          <div class="content  px-6 mt-6 ">
+            <div class="time flex w-2/4 justify-between font-roboto text-xs">
+              <span>6 days ago</span>
+              <span>1 min</span>
+            </div>
+            <div class="title mt-4 font-roboto ">
+              <h5>
+                <strong>Contrary to popular belief, Lorem </strong>
+              </h5>
+            </div>
+            <div class="main_content flex flex-col mt-4 text-base font-roboto">
+              <span>
+                Ipsum is not simply random text.
+                It has roots in a piece of classical
+                Latin literature from 45 BC
+              </span>
+              <a class="text-xs mt-3" href="html.com">read more </a>
+            </div>
+          </div>
+        </div> -->
+
+
+  </div>
+
+  <%- include('./component/footer.ejs') %>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/mains.js" defer type="module"></script>
+    <script src="/javascripts/global.js"></script>
+    </body>
+
+    </html>

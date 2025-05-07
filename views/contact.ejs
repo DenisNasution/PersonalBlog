@@ -1,0 +1,42 @@
+<%- include('./component/header.ejs') %>
+    <div class=" bg-black ">
+        <img src="/images/coffee.jpg" alt="" style="height: 300px; width: 100% " class="object-none " />
+    </div>
+
+    <div class="lg:px-72 px-16  py-10">
+        <form>
+            <div class="grid gap-x-8 sm:gap-y-8 gap-y-4 text-center ">
+                <div class='col-span-12 text-center text-3xl font-russoOne'>
+                    Contact Me
+                </div>
+                <div class="col-span-12 sm:flex justify-between w-full  ">
+                    <input type="text" class=' sm:w-[45%] w-full rounded-md h-12 pl-4 border-2 border-secondaryColor'
+                        placeholder='First Name'></input>
+                    <input type="text"
+                        class='sm:w-[45%] w-full sm:mt-0 mt-4 rounded-md h-12 pl-4 border-2 border-secondaryColor'
+                        placeholder='Last Name'></input>
+                </div>
+                <div class="col-span-12 sm:flex align-items-center justify-between w-full ">
+                    <input type="email" class='sm:w-[45%] w-full  rounded-md h-12 pl-4 border-2 border-secondaryColor'
+                        placeholder='Email Address'></input>
+                    <input type="text"
+                        class='sm:w-[45%] w-full sm:mt-0 mt-4 rounded-md h-12 pl-4 border-2 border-secondaryColor'
+                        placeholder='Company Name'></input>
+                </div>
+                <input class='col-span-12 w-full  rounded-md h-12 pl-4 border-2 border-secondaryColor'
+                    placeholder='Subject'></input>
+                <input class='col-span-12 w-full  rounded-md h-12 pl-4 border-2 border-secondaryColor'
+                    placeholder='Your message to us'></input>
+                <div class='bg-secondaryColor text-center p-2 '>
+                    Send
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <%- include('./component/footer.ejs') %>
+        <script src="/javascripts/mains.js" defer type="module"></script>
+        <script src="/javascripts/global.js"></script>
+        </body>
+
+        </html>

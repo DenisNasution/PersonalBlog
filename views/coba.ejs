@@ -1,0 +1,108 @@
+<%- include('./component/header.ejs') %>
+
+    <div class=" bg-white h-[400px] relative" id="banner" style="background-size: cover; background-repeat: no-repeat;">
+        <img alt="" style="height: 400px; width: 100% " class="object-cover " id="bannerImg" />
+        <input type="file" id="banner-upload" onchange="uploadBanner()" hidden>
+        <label for="banner-upload" class="banner-btn absolute bottom-4 right-4 text-3xl"><i
+                class="fa-solid fa-arrow-up-from-bracket"></i></label>
+    </div>
+    <div class="w-full xl:px-56 sm:px-32 px-12 py-10">
+        <form id="blogForm">
+            <input type="hidden" id="idBlog">
+            <div class="mb-3 flex flex-col">
+                <input type="text"
+                    class="border-2 border-none bg-transparent h-24 text-4xl focus:outline-white  hover:outline-white pl-2"
+                    id="judul" placeholder="Blog Title">
+            </div>
+            <!-- <input id="fileselector" type="file" webkitdirectory directory multiple="false" /> -->
+            <!-- <button onclick="getElementById('fileselector').click()">browse</button> -->
+            <!-- <div class="mb-3 flex flex-col">
+                    <label for="judul" class="form-label">Foto</label>
+                    <input type="file" class="border-[1px] border-black rounded-lg h-10 p-[4px]" name="blogFoto"
+                        id="blogFoto" onchange="loadFile(event)"> -->
+            <!-- multiple -->
+            <!-- <div id="gambar" class="grid grid-cols-2 gap-2">
+                    </div>
+                </div> -->
+            <!-- <div class="mb-3 flex flex-col">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="border-2 border-black rounded-lg p-2" id="description" rows="6"></textarea>
+                </div> -->
+            <div>
+                <textarea id="editor" name="txaContent"></textarea>
+            </div>
+            <button class="mt-3 py-2 px-6 bg-blue-700 rounded-lg text-white ">Send</button>
+        </form>
+
+        <button class=" py-2 px-6 bg-slate-700 rounded-lg text-white mt-4 " id="tombol">Get Data</button>
+        <button class=" py-2 px-6 bg-slate-700 rounded-lg text-white mt-4 " id="tombol1">Get
+            Data1</button>
+        <div class="mt-3 p-2 d-flex justify-content-center text-decoration-none bg-warning w-5 rounded-md bg-yellow-200"
+            style="width: 100px; ">
+            <a class="text-reset text-decoration-none" href="/">Home Page</a>
+        </div>
+        <div class="ml-3 mt-10 " id="tampilPesan">
+            <!-- <ul id="tampilPesan">
+                </ul> -->
+
+            <!-- <p><img alt="" src="images/upload/upload-1654518923093.jpg" /></p> -->
+            <p>&nbsp;</p>
+
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                suffered
+                alteration in some form, by injected humour,There are many variations of passages of Lorem
+                Ipsum
+                available, but the majority have suffered alteration in some form, by injected humour,There
+                are many
+                variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                in some
+                form, by injected humour,There are many variations of passages of Lorem Ipsum available, but
+                the
+                majority have suffered alteration in some form, by injected humour,There are many variations
+                of
+                passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
+                by
+                injected humour,There are many variations of passages of Lorem Ipsum available, but the
+                majority
+                have suffered alteration in some form, by injected humour,</p>
+            <p>&nbsp;</p>
+
+
+            <p>&nbsp;</p>
+
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                suffered
+                alteration in some form, by injected humour,There are many variations of passages of Lorem
+                Ipsum
+                available, but the majority have suffered alteration in some form, by injected humour,There
+                are many
+                variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                in some
+                form, by injected humour,There are many variations of passages of Lorem Ipsum available, but
+                the
+                majority have suffered alteration in some form, by injected humour,There are many variations
+                of
+                passages of Lorem Ipsum available, but the majority have suffered alteration in some form,
+                by
+                injected humour,There are many variations of passages of Lorem Ipsum available, but the
+                majority
+                have suffered alteration in some form, by injected humour,</p>
+            <ul>
+                <li>There are many variations of passages of Lorem Ipsum available, but the majority have
+                    suffered
+                    alteration in some form, by injected humour,</li>
+                <li>There are many variations of passages of Lorem Ipsum available, but the majority have
+                    suffered
+                    alteration in some form, by injected humour,</li>
+            </ul>
+        </div>
+    </div>
+    <%- include('./component/footer.ejs') %>
+
+
+        <script src=" /javascripts/coba2.js" type="module"></script>
+        <script src="/javascripts/ckeditor4/ckeditor/ckeditor.js"></script>
+        <script src="/javascripts/global.js"></script>
+        </body>
+
+        </html>

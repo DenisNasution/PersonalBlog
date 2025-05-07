@@ -1,0 +1,63 @@
+<%- include('./component/header.ejs') %>
+    <div class="xl:px-56 lg:px-32 px-12 py-10 ">
+        <h1 class='text-center text-3xl font-russoOne mt-4'>Daftar Kategori</h1>
+        <div>
+
+            <div id="alert"
+                class="<% if(flash){%> <%= flash.bg %>  <%} %>px-5 py-2 rounded-md flex flex-row items-center justify-between">
+                <% if(flash){%>
+
+                    <h2>
+                        <%= flash.message %>
+                    </h2>
+                    <%} %>
+                        <!-- <h1>
+                    Halo
+                </h1> -->
+                        <!-- <div>
+                    <i class="fas fa-times"></i>
+                </div> -->
+            </div>
+            <div class="flex flex-row justify-between">
+                <table class="table-auto w-1/2  border-slate-500 ">
+                    <thead>
+                        <tr class="">
+                            <th class="border-b-2 border-double border-slate-600 text-left py-3 w-8">Id</th>
+                            <th class="border-b-2 border-slate-600 text-left pl-6 w-1/2">Category</th>
+                            <th class="border-b-2 border-slate-600 text-center w-20 py-3">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyTable">
+                    </tbody>
+                </table>
+                <div class="pt-2 w-1/2 pl-14">
+                    <form action="" id="categoryForm">
+                        <h1 class="text-xl text-center mb-2">
+                            Tambah Kategori
+                        </h1>
+                        <input type="hidden" id="idKategori">
+                        <h1 class="ml-1">Kategori</h1>
+                        <input type="text" placeholder="Kategori"
+                            class="w-full mt-2 mb-2 rounded-md pl-4 border-2 h-10 border-secondaryColor" id="kategori">
+                        <h1 class="ml-1">Deskripsi</h1>
+                        <textarea placeholder="Description" id="deskripsi"
+                            class="w-full mt-2 rounded-md pl-4 h-40 border-2 border-secondaryColor ">
+                            </textarea>
+                        <button type="submit" class='bg-secondaryColor text-center rounded-md w-full mt-2 p-2 '>
+                            Simpan
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <%- include('./component/footer.ejs') %>
+        <!-- <script src="/socket.io/socket.io.js"></script> -->
+        <script src="/javascripts/adminCategory.js" type="module"></script>
+        <script src="/javascripts/global.js"></script>
+
+        </body>
+
+        </html>

@@ -1,0 +1,18 @@
+<% result.forEach(res=> { %>
+    <li class="uppercase font-bold" data-id=`${res.id}`>
+        <%= res.judul %>
+            <%= res.id %>
+                <ul>
+                    <li class="mt-1 ml-8 font-normal normal-case ">
+                        <%= res.description %>
+                    </li>
+                </ul>
+    </li>
+    <div class=" flex flex-roww-full mb-6 justify-end gap-x-4 ">
+        <input type="hidden" value="<%=res.id%>" id="idBlog">
+        <button class="bg-red-500 py-1 px-3 rounded-lg text-sm tombolDelete" id="<%=res.id%>">
+            <%= res.id %>
+        </button>
+        <a class="bg-yellow-400 py-1 px-5 rounded-lg text-sm tombolEdit" data-id=`${res.id}`>Edit</a>
+    </div>
+    <% }); %>

@@ -1,0 +1,26 @@
+<%- include('./component/header.ejs') %>
+
+    <div class="bg-white h-[400px]  relative" id="banner" style="background-size: cover;  background-position: center;">
+        <img alt="" style="height: 400px; width: 100% " class="object-fill" src="<%= result[0].image %>" />
+
+    </div>
+    <%= result[0].image %>
+        <div class=" w-full xl:px-56 sm:px-32 px-12 py-10">
+            <div class="mb-3 flex flex-col">
+                <p type="text" class="text-4xl" id="judul" placeholder="Blog Title">
+                    <%= result[0].judul %>
+                </p>
+            </div>
+            <div>
+                <%- result[0].description %>
+            </div>
+        </div>
+        <%- include('./component/footer.ejs') %>
+
+
+            <script src=" /javascripts/global.js"></script>
+            <script src=" /javascripts/coba2.js" type="module"></script>
+            <script src="/javascripts/ckeditor4/ckeditor/ckeditor.js"></script>
+            </body>
+
+            </html>

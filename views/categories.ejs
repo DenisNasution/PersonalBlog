@@ -1,0 +1,66 @@
+<%- include('./component/header.ejs') %>
+    <div class=" bg-black ">
+        <img src="/images/coffee.jpg" alt="" style="height: 300px; width: 100% " class="object-none " />
+    </div>
+
+    <div class=' grid place-content-center mt-10 '>
+        <h5 class='font-russoOne text-2xl'>Categories</h5>
+    </div>
+    <div class="mb-[107px] lg:px-56 md:px-12 px-6 py-10 ">
+        <% var text=null; %>
+            <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-x-3 md:gap-x-5">
+                <% for (var i=0; i<result.length; i++) {%>
+                    <% if(text !==result[i].kategori){ %>
+                        <div
+                            class="border-2 rounded-md bg-slate-100 sm:px-4 md:px-8 py-6 grid gap-y-2 mb-9 md:mb-8 h-min  md:mr-3.5 ">
+                            <h4 class='sm:text-md md:text-lg font-bold'>
+                                <%= result[i].kat %>
+                            </h4>
+                            <span class='sm:text-sm md:text-md'>
+                                Ipsum is not simply random text.
+                                It has roots in a piece of classical
+                                Latin literature from 45 BC
+                            </span>
+                            <a href="/categories/<%= result[i].kategori %> " class='block sm:text-sm md:text-md'>Check
+                                all</a>
+                        </div>
+                        <% text=result[i].kategori; %>
+                            <% } %>
+                                <!-- <div class="sm:columns-2 columns-1  gap-x-4 "> -->
+                                <div class="bg-slate-100 border-2 rounded-md h-min sm:mt-0 mb-9 mt-4">
+                                    <img class="rounded" src="/images/1.jpg" alt="" style="height: 15rem; " />
+                                    <div class="content sm:px-3  md:px-6 mt-6 ">
+                                        <div class="time flex w-2/4 justify-between font-roboto text-xs">
+                                            <span>1 days ago</span>
+                                            <span>1 min</span>
+                                        </div>
+                                        <div class="title mt-4 font-roboto ">
+                                            <h5>
+                                                <strong>
+                                                    <%= result[i].judul %>
+                                                </strong>
+                                            </h5>
+                                        </div>
+                                        <div class="main_content flex flex-col mt-4 text-base font-roboto pb-4">
+                                            <span class="sm:text-sm md:text-md">
+                                                Ipsum is not simply random text.
+                                                It has roots in a piece of classical
+                                                Latin literature from 45 BC
+                                            </span>
+                                            <a class="text-xs mt-3" href="html.com">read more </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- </div> -->
+                                <% } %>
+                                    <!-- </ul> -->
+            </div>
+
+    </div>
+
+    <%- include('./component/footer.ejs') %>
+        <script src="/javascripts/mains.js" defer type="module"></script>
+        <script src="/javascripts/global.js"></script>
+        </body>
+
+        </html>

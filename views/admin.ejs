@@ -1,0 +1,102 @@
+<%- include('./component/header.ejs') %>
+    <div class="xl:px-56 lg:px-32 px-12 py-10 ">
+        <h1 class='text-center text-3xl font-russoOne'>Daftar Blog</h1>
+        <div class="flex flex-row justify-between items-center">
+            <div>
+                <label for="cars">Filter kategori:</label>
+                <select id="kategori" class="ml-3 p-1 px-2 rounded-md" onchange="changeKat()">
+                    <option value="">
+                        Semua
+                    </option>
+                    <% kat.forEach(kat=> { %>
+                        <option value="<%= kat.id %>">
+                            <%= kat.kategori %>
+                        </option>
+                        <%}) %>
+                </select>
+            </div>
+            <div class="p-1 px-2 bg-blue-500 rounded-md">
+                <a href="/coba">+ Articel</a>
+            </div>
+        </div>
+        <div id="alert"
+            class="<% if(flash){%> <%= flash.bg %>  <%} %>px-5 py-2 rounded-md flex flex-row items-center justify-between">
+            <% if(flash){%>
+
+                <h2>
+                    <%= flash.message %>
+                </h2>
+                <%} %>
+        </div>
+
+        <table class="table-auto w-full  border-slate-500 ">
+            <thead>
+                <tr class="">
+                    <th class="border-b-2 border-double border-slate-600 text-left py-3 w-14">Id</th>
+                    <th class="border-b-2 border-slate-600 text-left py-3">Judul</th>
+                    <th class="border-b-2 border-slate-600 text-left py-3 w-1/5">Category</th>
+                    <th class="border-b-2 border-slate-600 text-center py-3 w-1/5">Banner</th>
+                    <th class="border-b-2 border-slate-600 text-center w-20 py-3">Action</th>
+                </tr>
+            </thead>
+            <tbody id="bodyTable">
+
+                <!-- <tr>
+                        <td class="border-b-2 border-slate-700 text-left py-3">2</td>
+                        <td class="border-b-2 border-slate-700 text-left py-3">Columbus</td>
+                        <td class="border-b-2 border-slate-700 text-left py-3">Columbus</td>
+                        <td class="border-b-2 border-slate-700 text-right py-3 w-1/4">
+                            <img src="/images/2.jpg" width="80" height="80" class="mx-auto" />
+                        </td>
+                        <td class="border-b-2 border-slate-700 text-center py-3">
+                            <i class="fas fa-eye" id="viewIcon" data-id="143"></i>
+                            <i class="fas fa-trash"></i>
+                            <i class="fas fa-pen"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="border-b-2 border-slate-700 ...">3</td>
+                        <td class="border-b-2 border-slate-700 ...">Detroit</td>
+                        <td class="border-b-2 border-slate-700 ...">Detroit</td>
+                        <td class="border-b-2 border-slate-700 text-right py-3 w-1/4">
+                            <img src="/images/3.jpg" width="80" height="80" class="mx-auto" />
+                        </td>
+                        <td class="border-b-2 border-slate-700 text-center py-3">
+                            <i class="fas fa-eye" id="viewIcon" data-id="144"></i>
+                            <i class="fas fa-trash"></i>
+                            <i class="fas fa-pen"></i>
+                        </td>
+                    </tr> -->
+            </tbody>
+        </table>
+        <nav aria-label="Page navigation example">
+            <div class="pagination flex flex-row items-center mt-2">
+                <div class="page-item py-1 px-2 bg-slate-300 mr-3" id="prev">
+                    <button class="page-link" id="prevButton">Prev</button>
+                </div>
+                <div class="page-item py-1 px-2 bg-slate-300" id="next">
+                    <button class="page-link" id="nextButton">Next</button>
+                    </d>
+                </div>
+        </nav>
+        <input type="hidden" id="pag" value=<%=flash.cur %>>
+        <%= flash.cur %>
+            <!-- <div id="before"
+            ></div>
+        <div id="pagination">
+
+        </div>
+        <div id="after"></div> -->
+
+    </div>
+    <!-- <button class="bg-slate-400" id="iconButton">Icon</button> -->
+    <button class=" py-2 px-6 bg-slate-700 rounded-lg text-white mt-4 " id="tombolAdmin">Get
+        Data1</button>
+    </div>
+
+    <%- include('./component/footer.ejs') %>
+        <script src="/javascripts/admin.js" type="module"></script>
+        <script src="/javascripts/global.js"></script>
+        </body>
+
+        </html>

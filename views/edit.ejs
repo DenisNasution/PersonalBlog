@@ -1,0 +1,40 @@
+<%- include('./component/header.ejs') %>
+
+    <!-- <div id="tampilPesan"> -->
+    <div class=" bg-white h-[300px] relative" id="banner" style="background-size: cover; background-repeat: no-repeat;">
+        <img alt="" style="height: 300px; width: 100% " class="object-none " id="bannerImg" />
+        <input type="file" id="banner-upload" onchange="uploadBanner()" hidden>
+        <label for="banner-upload" class="banner-btn absolute bottom-4 right-4 text-3xl"><i
+                class="fa-solid fa-arrow-up-from-bracket"></i></label>
+    </div>
+    <div class="w-full xl:px-56 sm:px-32 px-12 py-10">
+
+        <form id="blogForm">
+            <input type="hidden" value="<%= id %> " id="idBlog">
+            <div class="mb-3 flex flex-col">
+                <input type="text"
+                    class="border-2 border-none bg-transparent h-24 text-4xl focus:outline-white  hover:outline-white pl-2"
+                    id="judul" placeholder="Blog Title">
+            </div>
+            <div>
+                <textarea id="editor" name="txaContent"></textarea>
+            </div>
+            <button class="mt-3 py-2 px-6 bg-blue-700 rounded-lg text-white ">Send</button>
+        </form>
+        <input type="hidden" id="cur" value=<%=cur%> />
+        <div>
+            <a href="/coba/coba">getData</a>
+        </div>
+    </div>
+    <!-- </div> -->
+
+
+    <%- include('./component/footer.ejs') %>
+
+
+        <script src=" /javascripts/edit.js" type="module"></script>
+        <script src="/javascripts/ckeditor4/ckeditor/ckeditor.js"></script>
+        <script src="/javascripts/global.js"></script>
+        </body>
+
+        </html>

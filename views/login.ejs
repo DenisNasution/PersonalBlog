@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Persona Blog
+    </title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Miriam+Libre&family=Roboto:wght@100&family=Russo+One&family=Secular+One&display=swap"
+        rel="stylesheet">
+    <link href="/stylesheets/fontawesome.css" rel="stylesheet">
+    <link href="/stylesheets/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+
+<body>
+    <div class="min-h-screen overflow-x-hidden relative bg-bodyColor grid ">
+        <div class="lg:px-72 px-16 py-10 h-3/4 grid content-center">
+            <form id="formLogin">
+                <div
+                    class="grid grid-cols-1 sm:gap-y-8 gap-y-4 justify-items-center items-center text-center columns-1">
+                    <div class='col-span-12 text-center text-3xl font-russoOne'>
+                        Login
+                    </div>
+                    <input class='col-span-12 w-1/2 rounded-md h-12 pl-4 border-2 border-secondaryColor'
+                        placeholder='username' id="username"></input>
+                    <input class='col-span-12 w-1/2 rounded-md  h-12 pl-4 border-2 border-secondaryColor'
+                        placeholder='password' id="password"></input>
+                    <button class='col-span-12 w-1/2 bg-secondaryColor text-center p-2 '>
+                        Login
+                    </button>
+                </div>
+            </form>
+            <!-- <button class='col-span-12 w-1/2 bg-secondaryColor text-center p-2 mt-2' id="logout">
+                Logout
+            </button>
+            <button class='col-span-12 w-1/2 bg-secondaryColor text-center p-2 mt-2' id="get">
+                getCookies
+            </button> -->
+        </div>
+        <script src="/javascripts/login.js" defer type="module"></script>
+</body>
+
+</html>

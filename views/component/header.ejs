@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Persona Blog
+    </title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Miriam+Libre&family=Roboto:wght@100&family=Russo+One&family=Secular+One&display=swap"
+        rel="stylesheet">
+    <link href="/stylesheets/fontawesome.css" rel="stylesheet">
+    <link href="/stylesheets/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <!-- <script src="../test.js"></script> -->
+    <!-- <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+    </script> -->
+</head>
+
+<body class="relative">
+    <div class="min-h-screen overflow-x-hidden  bg-bodyColor">
+        <div
+            class=" fixed p-0 left-0 text-bodyColor w-full h-10 min-h-min bg-navbar display:flex items:center z-40 lg:px-52 sm:px-32 xs:px-20  px-12">
+            <div class="w-full  h-full flex items-center  sm:justify-between font-secular ">
+                <div class=" w-full">
+                    <h1>
+                        <a href="/">Persona Blog</a>
+                    </h1>
+                </div>
+                <div class="w-full   ">
+                    <div class="md:hidden  mb-0 text-right">
+
+                        <i class="fa-solid fa-bars" id="burger"></i>
+                    </div>
+                    <!-- justify-between flex-row lg:gap-y-6 md:gap-x-6 sm-gap-x-4 w-full  font-secular -->
+                    <!-- grid content-center absolute top-0 bottom-0 left-0 right-0 bg-navbar py-auto h-screen -->
+                    <!-- flex-col  justify-center items-center gap-y-14 -->
+                    <div class=" " id="fullnavbar">
+                        <div class="md:flex hidden md:justify-between md:flex-row md:gap-y-6 md:gap-x-6 md:w-full  font-secular flex-col  justify-center items-center gap-y-14"
+                            id="listMenu">
+                            <i class="fa-solid fa-xmark hidden" id="cross"></i>
+                            <a href="/about">About</a>
+                            <a href="/">Blog</a>
+                            <a href="/contact">Contact</a>
+                            <a href="/categories">Categories</a>
+                            <!-- <a href="/coba/admin">Admin</a> -->
+                            <div class="dropdown relative float-right ">
+                                <button onclick="dropdown()" id="dropbtn" class="">Admin</button>
+                                <div id="myDropdown"
+                                    class="dropdown-content z-10
+                              absolute hidden  overflow-auto bg-white w-36 flex flex-col text-left text-neutral-600 rounded-md p-3 float-right">
+                                    <a href="/coba/admin">Blog List</a>
+                                    <a href="/coba/adminCategory">Category List</a>
+                                    <a href="#contact">Contact</a>
+                                    <a href="" id="logout">LogOut</a>
+                                </div>
+                            </div>
+                            <!-- <div id="profile">
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>

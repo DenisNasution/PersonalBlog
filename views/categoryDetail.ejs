@@ -1,0 +1,43 @@
+<%- include('./component/header.ejs') %>
+    <div class=" bg-black ">
+        <img src="/images/coffee.jpg" alt="" style="height: 300px; width: 100% " class="object-none " />
+    </div>
+
+    <div class="mb-[107px] xl:px-56 px-12 py-10">
+        <div class=" grid md:grid-cols-3 grid-cols-1 gap-x-8 mt-12  ">
+            <div class="sm:columns-3 columns-1 sm:col-span-3 gap-x-4 ">
+                <% result.forEach(res=> {%>
+                    <div class="border-2 rounded-md h-min sm:mt-0 mt-4">
+                        <img class="rounded" src="/images/1.jpg" alt="" style="height: 55%; width: 100%" />
+                        <div class="content  px-6 mt-6 ">
+                            <div class="time flex w-2/4 justify-between font-roboto text-xs">
+                                <span>1 days ago</span>
+                                <span>1 min</span>
+                            </div>
+                            <div class="title mt-4 font-roboto ">
+                                <h5>
+                                    <strong>Contrary to popular belief, Lorem </strong>
+                                </h5>
+                            </div>
+                            <div class="main_content flex flex-col mt-4 text-base font-roboto">
+                                <span>
+                                    Ipsum is not simply random text.
+                                    It has roots in a piece of classical
+                                    Latin literature from 45 BC
+                                </span>
+                                <a class="text-xs mt-3" href="coba/viewAdmin/<%= res.id %>">read more </a>
+                            </div>
+                        </div>
+                    </div>
+                    <%}) %>
+
+            </div>
+        </div>
+
+    </div>
+
+    <%- include('./component/footer.ejs') %>
+        <script src="/javascripts/global.js"></script>
+        </body>
+
+        </html>
