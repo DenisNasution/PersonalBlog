@@ -16,7 +16,8 @@ A responsive, full-stack personal blog platform built using **Node.js**, **EJS**
 |---------------|------------------------|
 | Backend       | Node.js, Express.js    |
 | View Engine   | EJS (Embedded JS)      |
-| Database      | MySQL |
+| Styling       | Tailwind CSS           |
+| Database      | MySQL                  |
 
 ## 🚀 Getting Started
 
@@ -43,3 +44,8 @@ cp .env.example .env
 # Run the app
 npm run dev
 ```
+
+## 📲 Responsive Layout
+- Fully responsive with Tailwind utility classes
+- Mobile-first design approach
+- Custom breakpoints and theme available in tailwind.config.js
